@@ -367,23 +367,6 @@ docker-compose logs -f
 docker-compose down
 ```
 
-## Testing
-
-### Backend Tests
-
-```bash
-cd backend
-
-# Run all tests
-npm run test
-
-# Watch mode
-npm run test:watch
-
-# Coverage report
-npm run test:cov
-```
-
 ## Environment Variables
 
 ### Backend (.env)
@@ -418,41 +401,6 @@ VITE_API_URL=http://localhost:3000
 - Single-user projects (no collaboration)
 - No task dependencies
 - No task comments
-
-## Troubleshooting
-
-### MongoDB not connecting
-
-Make sure MongoDB service is running:
-
-```bash
-# Windows
-net start MongoDB
-
-# Check service status
-Get-Service MongoDB
-```
-
-### Port already in use
-
-If port 3000 or 5173 is already in use:
-
-```bash
-# Windows - Find process
-netstat -ano | findstr :3000
-
-# Kill process
-taskkill /PID <PID> /F
-```
-
-### Module not found errors
-
-Try clearing node_modules and reinstalling:
-
-```bash
-rm -rf node_modules package-lock.json
-npm install
-```
 
 ## Deployment
 
