@@ -1,3 +1,9 @@
-import { defineConfig } from 'vite';
+/// <reference types="vite/client" />
 
-export default defineConfig({});
+interface ImportMetaEnv {
+  readonly VITE_API_URL: string
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}
