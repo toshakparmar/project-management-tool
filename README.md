@@ -2,6 +2,16 @@
 
 A full-stack project management application built with React, TypeScript, NestJS, and MongoDB.
 
+## Live Demo
+
+- **Frontend**: [https://project-management-tool-chi-ruby.vercel.app](https://project-management-tool-chi-ruby.vercel.app)
+- **Backend API**: [https://project-management-tool-byza.onrender.com](https://project-management-tool-byza.onrender.com)
+
+**Test Credentials:**
+
+- Email: `test@example.com`
+- Password: `Test@123`
+
 ## Features
 
 - User authentication with JWT
@@ -443,6 +453,71 @@ Try clearing node_modules and reinstalling:
 rm -rf node_modules package-lock.json
 npm install
 ```
+
+## Deployment
+
+### Production Deployment
+
+The application is deployed on the following platforms:
+
+#### Frontend (Vercel)
+- **URL**: https://project-management-tool-chi-ruby.vercel.app
+- **Platform**: Vercel
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Root Directory**: `frontend`
+
+#### Backend (Render)
+- **URL**: https://project-management-tool-byza.onrender.com
+- **Platform**: Render
+- **Build Command**: `npm install && npm run build`
+- **Start Command**: `node dist/main.js`
+- **Root Directory**: `backend`
+
+#### Database (MongoDB Atlas)
+- **Platform**: MongoDB Atlas
+- **Region**: Asia-Southeast (Singapore)
+- **Tier**: M0 (Free)
+
+### Environment Variables
+
+**Backend (Render):**
+```env
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/project-management
+JWT_SECRET=your-production-jwt-secret
+JWT_EXPIRATION=7d
+PORT=10000
+NODE_ENV=production
+FRONTEND_URL=https://project-management-tool-chi-ruby.vercel.app
+```
+
+**Frontend (Vercel):**
+```env
+VITE_API_URL=https://project-management-tool-byza.onrender.com
+```
+
+### Deployment Steps
+
+#### Deploy Backend to Render
+1. Connect GitHub repository to Render
+2. Set root directory to `backend`
+3. Configure build and start commands
+4. Add environment variables
+5. Deploy
+
+#### Deploy Frontend to Vercel
+1. Connect GitHub repository to Vercel
+2. Set root directory to `frontend`
+3. Configure build settings (Vite)
+4. Add environment variables
+5. Deploy
+
+#### Setup MongoDB Atlas
+1. Create a free M0 cluster
+2. Configure network access (allow 0.0.0.0/0)
+3. Create database user
+4. Get connection string
+5. Update backend environment variable
 
 ## License
 
