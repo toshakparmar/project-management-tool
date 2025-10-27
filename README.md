@@ -100,7 +100,7 @@ JWT_EXPIRATION=7d
 PORT=3000
 ```
 
-Update `frontend/env`:
+Update `frontend/.env`:
 
 ```env
 VITE_API_URL=http://localhost:3000
