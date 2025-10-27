@@ -85,23 +85,24 @@ cd backend
 cp .env.example .env
 ```
 
-Update `backend/.env`:
-
-```env
-MONGODB_URI=mongodb://localhost:27017/project-management
-JWT_SECRET=your-super-secret-jwt-key-change-in-production
-JWT_EXPIRATION=7d
-PORT=3000
-```
-
 ```bash
 # Frontend .env (if needed)
 cd ../frontend
 cp .env.example .env
 ```
 
+Update `backend/.env`:
+
 ```env
-#Backend Server Url
+MONGODB_URI=mongodb://localhost:27017/project-management
+JWT_SECRET=your-super-secret-jwt-key-change-in-production (Create-your-own)
+JWT_EXPIRATION=7d
+PORT=3000
+```
+
+Update `frontend/env`:
+
+```env
 VITE_API_URL=http://localhost:3000
 ```
 
