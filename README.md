@@ -100,7 +100,7 @@ cd ../frontend
 cp .env.example .env
 ```
 
-```bash
+```env
 #Backend Server Url
 VITE_API_URL=http://localhost:3000
 ```
