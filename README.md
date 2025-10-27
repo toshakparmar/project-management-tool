@@ -98,6 +98,7 @@ MONGODB_URI=mongodb://localhost:27017/project-management
 JWT_SECRET=your-super-secret-jwt-key-change-in-production (Create-your-own)
 JWT_EXPIRATION=7d
 PORT=3000
+FRONTEND_URL=http://localhost:5173
 ```
 
 Update `frontend/.env`:
