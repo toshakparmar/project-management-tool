@@ -100,6 +100,11 @@ cd ../frontend
 cp .env.example .env
 ```
 
+```bash
+#Backend Server Url
+VITE_API_URL=http://localhost:3000
+```
+
 ### 4. Start MongoDB
 
 **Windows:**
